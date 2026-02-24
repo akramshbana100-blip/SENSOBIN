@@ -1,462 +1,0 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SensoBin — سلة النفايات الذكية</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
-</head>
-<body>
-
-  <!-- ====== NAV ====== -->
-  <nav class="navbar">
-    <div class="nav-logo">
-      <span class="logo-icon">🗑️</span>
-      <span class="logo-text">SensoBin</span>
-    </div>
-    <ul class="nav-links">
-      <li><a href="#about">عن المشروع</a></li>
-      <li><a href="#how">آلية العمل</a></li>
-      <li><a href="#specs">المواصفات</a></li>
-
-      <li><a href="#references">المراجع</a></li>
-
-    </ul>
-    <div class="hamburger" id="hamburger">
-      <span></span><span></span><span></span>
-    </div>
-  </nav>
-
-  <!-- ====== HERO ====== -->
-  <header class="hero" id="home">
-    <div class="hero-bg-grid"></div>
-    <div class="hero-orb orb-1"></div>
-    <div class="hero-orb orb-2"></div>
-    <div class="hero-orb orb-3"></div>
-
-    <div class="hero-content">
-      <div class="hero-badge">🏆 جوائز القمة العالمية · World Summit Awards</div>
-      <h1 class="hero-title">
-        <span class="title-en">SensoBin</span>
-        <span class="title-ar">سلة النفايات الذكية</span>
-      </h1>
-      <p class="hero-desc">
-        مشروع يجمع بين الأنظمة المدمجة والذكاء الآلي لمراقبة سلال النفايات في الوقت الفعلي،
-        وإرسال تنبيهات تلقائية لتفادي الامتلاء وتحقيق بيئة أنظف وأكثر كفاءة.
-      </p>
-      <div class="hero-btns">
-        <a href="#how" class="btn btn-primary">اكتشف المشروع</a>
-
-      </div>
-
-      <div class="hero-stats">
-        <div class="stat">
-          <span class="stat-num">3</span>
-          <span class="stat-lbl">حالات مراقبة</span>
-        </div>
-        <div class="stat-div"></div>
-        <div class="stat">
-          <span class="stat-num">90%</span>
-          <span class="stat-lbl">عتبة التنبيه</span>
-        </div>
-        <div class="stat-div"></div>
-        <div class="stat">
-          <span class="stat-num">LED</span>
-          <span class="stat-lbl">إشارات بصرية</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="hero-visual">
-      <div class="bin-3d">
-        <div class="bin-lid"></div>
-        <div class="bin-body">
-          <div class="bin-fill" id="binFill"></div>
-          <div class="bin-sensor-ray"></div>
-        </div>
-        <div class="bin-label">SMART BIN</div>
-        <div class="led-indicators">
-          <div class="led led-green active" title="فارغة"></div>
-          <div class="led led-yellow" title="متوسطة"></div>
-          <div class="led led-red" title="ممتلئة"></div>
-        </div>
-      </div>
-      <div class="signal-rings">
-        <div class="ring r1"></div>
-        <div class="ring r2"></div>
-        <div class="ring r3"></div>
-      </div>
-    </div>
-  </header>
-
-  <!-- ====== ABOUT ====== -->
-  <section class="section about-section" id="about">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">من نحن</span>
-        <h2 class="section-title">عن المشروع</h2>
-      </div>
-      <div class="about-grid">
-        <div class="about-text">
-          <p>
-            <strong>SensoBin</strong> مشروع علمي يهدف إلى تصميم وتنفيذ سلة نفايات ذكية
-            تعتمد على تقنيات الأنظمة المدمجة لمراقبة مستوى الامتلاء تلقائياً.
-          </p>
-          <p>
-            يعتمد النظام على حساسات قياس المسافة لرصد مستوى الامتلاء، مرتبطة بمتحكم دقيق
-            لمعالجة البيانات واتخاذ القرار المناسب. عند وصول النفايات إلى مستوى محدد (90% أو أكثر)،
-            يُرسَل إشعار إلكتروني تلقائي إلى موظف البلدية المختص.
-          </p>
-          <p>
-            يسهم المشروع في توظيف التقنيات الذكية في خدمات البلديات، ودعم التوجه نحو
-            المدن الذكية، والحفاظ على البيئة من خلال إدارة أكثر فعالية للنفايات.
-          </p>
-        </div>
-        <div class="about-cards">
-          <div class="about-card">
-            <div class="card-icon">🎯</div>
-            <h3>المشكلة</h3>
-            <p>تراكم النفايات في الشوارع والأحياء بسبب تأخر عمليات الجمع وعدم معرفة مستوى الامتلاء</p>
-          </div>
-          <div class="about-card">
-            <div class="card-icon">💡</div>
-            <h3>الحل</h3>
-            <p>نظام ذكي يراقب السلة ويُنبّه الموظف المختص تلقائياً عند الامتلاء</p>
-          </div>
-          <div class="about-card">
-            <div class="card-icon">🌱</div>
-            <h3>الأثر</h3>
-            <p>بيئة أنظف وتقليل التكاليف التشغيلية ودعم مسيرة المدن الذكية</p>
-          </div>
-          <div class="about-card">
-            <div class="card-icon">🏆</div>
-            <h3>التميز</h3>
-            <p>تمثيل في جوائز القمة العالمية (WSA) للابتكار الرقمي وتقنيات المدن الذكية</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ====== HOW IT WORKS ====== -->
-  <section class="section how-section" id="how">
-    <div class="how-bg"></div>
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">التقنية</span>
-        <h2 class="section-title">كيف يعمل SensoBin؟</h2>
-      </div>
-      <div class="flow-steps">
-        <div class="flow-step" data-delay="0">
-          <div class="step-num">01</div>
-          <div class="step-icon">📡</div>
-          <h3>القياس</h3>
-          <p>حساسات فوق صوتية تقيس المسافة بين غطاء السلة ومستوى النفايات باستمرار</p>
-        </div>
-        <div class="flow-arrow">→</div>
-        <div class="flow-step" data-delay="100">
-          <div class="step-num">02</div>
-          <div class="step-icon">🧠</div>
-          <h3>المعالجة</h3>
-          <p>المتحكم الدقيق يحلّل البيانات ويحدد حالة السلة (فارغة / متوسطة / ممتلئة)</p>
-        </div>
-        <div class="flow-arrow">→</div>
-        <div class="flow-step" data-delay="200">
-          <div class="step-num">03</div>
-          <div class="step-icon">💡</div>
-          <h3>الإشارة البصرية</h3>
-          <p>مصابيح LED تعكس حالة السلة: أخضر فارغة، أصفر متوسطة، أحمر ممتلئة</p>
-        </div>
-        <div class="flow-arrow">→</div>
-        <div class="flow-step" data-delay="300">
-          <div class="step-num">04</div>
-          <div class="step-icon">📲</div>
-          <h3>التنبيه التلقائي</h3>
-          <p>عند الامتلاء 90% يُرسَل إشعار إلكتروني فوري لموظف البلدية المختص</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ====== SPECS TABLE ====== -->
-  <section class="section specs-section" id="specs">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">المواصفات</span>
-        <h2 class="section-title">جدول الحالات والمواصفات</h2>
-      </div>
-      <div class="table-wrapper">
-        <table class="specs-table">
-          <thead>
-            <tr>
-              <th>حالة السلة</th>
-              <th>المسافة المقاسة (سم)</th>
-              <th>نسبة الامتلاء</th>
-              <th>إشارة LED</th>
-              <th>حالة التنبيه الإلكتروني</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="row-green">
-              <td><span class="status-badge badge-green">فارغة</span></td>
-              <td>٣٠ سم</td>
-              <td>
-                <div class="progress-wrap">
-                  <div class="progress-bar" style="width:0%; background:#2ecc71"></div>
-                  <span>0%</span>
-                </div>
-              </td>
-              <td><span class="led-dot dot-green"></span> أخضر</td>
-              <td>لا يوجد</td>
-            </tr>
-            <tr class="row-yellow">
-              <td><span class="status-badge badge-yellow">متوسطة</span></td>
-              <td>١٥ سم</td>
-              <td>
-                <div class="progress-wrap">
-                  <div class="progress-bar" style="width:50%; background:#f1c40f"></div>
-                  <span>50%</span>
-                </div>
-              </td>
-              <td><span class="led-dot dot-yellow"></span> أصفر</td>
-              <td>لا يوجد</td>
-            </tr>
-            <tr class="row-red">
-              <td><span class="status-badge badge-red">ممتلئة</span></td>
-              <td>٥ سم أو أقل</td>
-              <td>
-                <div class="progress-wrap">
-                  <div class="progress-bar" style="width:90%; background:#e74c3c"></div>
-                  <span>≥90%</span>
-                </div>
-              </td>
-              <td><span class="led-dot dot-red"></span> أحمر</td>
-              <td><span class="alert-badge">🔔 إرسال إشعار تلفاقي</span></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div class="components-section">
-        <h3 class="sub-title">المكوّنات الرئيسية</h3>
-        <div class="components-grid">
-          <div class="component-card">
-            <div class="comp-icon">⚡</div>
-            <div class="comp-name">Arduino / ESP8266</div>
-            <div class="comp-desc">المتحكم الدقيق للمعالجة والتحكم</div>
-          </div>
-          <div class="component-card">
-            <div class="comp-icon">📡</div>
-            <div class="comp-name">HC-SR04</div>
-            <div class="comp-desc">حساس المسافة فوق الصوتي</div>
-          </div>
-          <div class="component-card">
-            <div class="comp-icon">💡</div>
-            <div class="comp-name">LED × 3</div>
-            <div class="comp-desc">مصابيح إشارة ملونة (أخضر، أصفر، أحمر)</div>
-          </div>
-          <div class="component-card">
-            <div class="comp-icon">📶</div>
-            <div class="comp-name">Wi-Fi Module</div>
-            <div class="comp-desc">وحدة الاتصال اللاسلكي لإرسال الإشعارات</div>
-          </div>
-          <div class="component-card">
-            <div class="comp-icon">🔋</div>
-            <div class="comp-name">Power Supply</div>
-            <div class="comp-desc">مصدر طاقة متصل أو بطارية</div>
-          </div>
-          <div class="component-card">
-            <div class="comp-icon">📦</div>
-            <div class="comp-name">هيكل السلة</div>
-            <div class="comp-desc">سلة نفايات مجهّزة بالحساسات</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ====== CODE PREVIEW ====== -->
-  <section class="section code-section" id="code">
-    <div class="code-bg"></div>
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">البرمجة</span>
-        <h2 class="section-title">نظرة على الكود</h2>
-      </div>
-      <div class="code-window">
-        <div class="code-titlebar">
-          <span class="dot-close"></span>
-          <span class="dot-min"></span>
-          <span class="dot-max"></span>
-          <span class="code-filename">sensobin.ino — Arduino</span>
-        </div>
-        <pre class="code-block"><code><span class="c-comment">/* ===== Loop ===== */</span>
-<span class="c-kw">void</span> <span class="c-fn">loop</span>() {
-  server.<span class="c-fn">handleClient</span>();
-
-  <span class="c-comment">/* ===== قراءة السلة 1 ===== */</span>
-  <span class="c-fn">digitalWrite</span>(TRIG1, LOW); <span class="c-fn">delayMicroseconds</span>(<span class="c-num">2</span>);
-  <span class="c-fn">digitalWrite</span>(TRIG1, HIGH); <span class="c-fn">delayMicroseconds</span>(<span class="c-num">10</span>);
-  <span class="c-fn">digitalWrite</span>(TRIG1, LOW);
-  <span class="c-kw">long</span> duration1 = <span class="c-fn">pulseIn</span>(ECHO1, HIGH, <span class="c-num">30000</span>);
-  <span class="c-kw">if</span>(duration1 != <span class="c-num">0</span>) distance1 = duration1 * <span class="c-num">0.034</span> / <span class="c-num">2</span>;
-
-  <span class="c-kw">if</span>(distance1 &lt; <span class="c-num">10</span>){
-    <span class="c-fn">digitalWrite</span>(PIN1_CLOSE, HIGH); <span class="c-comment">/* ممتلئة - LED أحمر */</span>
-    status1 = <span class="c-str">"ممتلئة"</span>; color1 = <span class="c-str">"#e74c3c"</span>;
-  } <span class="c-kw">else if</span>(distance1 &gt;= <span class="c-num">10</span> &amp;&amp; distance1 &lt;= <span class="c-num">20</span>){
-    <span class="c-fn">digitalWrite</span>(PIN1_MID, HIGH); <span class="c-comment">/* متوسطة - LED أصفر */</span>
-    status1 = <span class="c-str">"نصف ممتلئ"</span>; color1 = <span class="c-str">"#f1c40f"</span>;
-  } <span class="c-kw">else</span> {
-    <span class="c-fn">digitalWrite</span>(PIN1_FAR, HIGH); <span class="c-comment">/* فارغة - LED أخضر */</span>
-    status1 = <span class="c-str">"فارغة"</span>; color1 = <span class="c-str">"#2ecc71"</span>;
-  }
-
-  <span class="c-fn">delay</span>(<span class="c-num">300</span>);
-}</code></pre>
-      </div>
-    </div>
-  </section>
-
-
-
-  <!-- ====== REFERENCES ====== -->
-  <section class="section references-section" id="references">
-    <div class="ref-bg"></div>
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">المصادر</span>
-        <h2 class="section-title">المراجع والمصادر</h2>
-      </div>
-      <div class="references-grid">
-
-        <div class="ref-card">
-          <div class="ref-num">01</div>
-          <div class="ref-content">
-            <h4>Arduino Official Documentation</h4>
-            <p>توثيق رسمي لبرمجة المتحكمات الدقيقة وواجهات التطوير</p>
-            <a href="https://www.arduino.cc/reference/en/" target="_blank" class="ref-link">arduino.cc ↗</a>
-          </div>
-        </div>
-
-        <div class="ref-card">
-          <div class="ref-num">02</div>
-          <div class="ref-content">
-            <h4>HC-SR04 Ultrasonic Sensor Datasheet</h4>
-            <p>المواصفات التقنية لحساس المسافة فوق الصوتي المستخدم في القياس</p>
-            <a href="https://cdn.sparkfun.com/datasheets/Sensors/Proximity/HCSR04.pdf" target="_blank" class="ref-link">Datasheet PDF ↗</a>
-          </div>
-        </div>
-
-        <div class="ref-card">
-          <div class="ref-num">03</div>
-          <div class="ref-content">
-            <h4>ESP8266 Wi-Fi Module Documentation</h4>
-            <p>دليل الاستخدام والبرمجة لوحدة الاتصال اللاسلكي</p>
-            <a href="https://www.espressif.com/en/products/socs/esp8266" target="_blank" class="ref-link">espressif.com ↗</a>
-          </div>
-        </div>
-
-        <div class="ref-card">
-          <div class="ref-num">04</div>
-          <div class="ref-content">
-            <h4>Smart Waste Management Systems — IEEE</h4>
-            <p>بحث علمي في أنظمة إدارة النفايات الذكية مع الأنظمة المدمجة</p>
-            <a href="https://ieeexplore.ieee.org" target="_blank" class="ref-link">ieeexplore.ieee.org ↗</a>
-          </div>
-        </div>
-
-        <div class="ref-card">
-          <div class="ref-num">05</div>
-          <div class="ref-content">
-            <h4>جوائز القمة العالمية (WSA)</h4>
-            <p>الموقع الرسمي لجوائز القمة العالمية للابتكار الرقمي وتقنيات المدن الذكية</p>
-            <a href="https://www.wsa-global.org" target="_blank" class="ref-link">wsa-global.org ↗</a>
-          </div>
-        </div>
-
-        <div class="ref-card">
-          <div class="ref-num">06</div>
-          <div class="ref-content">
-            <h4>IoT in Smart Cities — ResearchGate</h4>
-            <p>أبحاث تطبيقات إنترنت الأشياء في المدن الذكية والبنية التحتية</p>
-            <a href="https://www.researchgate.net" target="_blank" class="ref-link">researchgate.net ↗</a>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-
-  <!-- ====== FOOTER ====== -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-inner">
-        <div class="footer-brand">
-          <span class="logo-icon">🗑️</span>
-          <span class="logo-text">SensoBin</span>
-          <p>سلة النفايات الذكية · جوائز القمة العالمية (WSA)</p>
-        </div>
-        <div class="footer-links">
-          <a href="#about">عن المشروع</a>
-          <a href="#how">آلية العمل</a>
-          <a href="#specs">المواصفات</a>
-          <a href="#references">المراجع</a>
-
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>© 2026 SensoBin — جميع الحقوق محفوظة · جوائز القمة العالمية (WSA)</p>
-      </div>
-    </div>
-  </footer>
-
-  <script>
-    // Nav scroll effect
-    window.addEventListener('scroll', () => {
-      const nav = document.querySelector('.navbar');
-      nav.classList.toggle('scrolled', window.scrollY > 60);
-    });
-
-    // Hamburger menu
-    document.getElementById('hamburger').addEventListener('click', () => {
-      document.querySelector('.nav-links').classList.toggle('open');
-    });
-
-    // Animated bin fill demo
-    const fills = [0, 50, 90, 50, 0];
-    const leds = document.querySelectorAll('.led');
-    let fi = 0;
-    function cycleBin() {
-      fi = (fi + 1) % fills.length;
-      const pct = fills[fi];
-      const binFill = document.getElementById('binFill');
-      binFill.style.height = pct + '%';
-      if (pct < 30) {
-        binFill.style.background = '#2ecc71';
-        leds[0].classList.add('active'); leds[1].classList.remove('active'); leds[2].classList.remove('active');
-      } else if (pct < 80) {
-        binFill.style.background = '#f1c40f';
-        leds[0].classList.remove('active'); leds[1].classList.add('active'); leds[2].classList.remove('active');
-      } else {
-        binFill.style.background = '#e74c3c';
-        leds[0].classList.remove('active'); leds[1].classList.remove('active'); leds[2].classList.add('active');
-      }
-    }
-    setInterval(cycleBin, 2000);
-
-    // Intersection observer for animations
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('.about-card, .flow-step, .ref-card, .component-card').forEach(el => observer.observe(el));
-
-
-  </script>
-</body>
-</html>
