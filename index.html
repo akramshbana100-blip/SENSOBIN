@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SensoBin – السلة الذكية</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
+</head>
+<body class="lang-ar">
+
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <div class="lang-toggle">
+      <button id="btn-ar" class="active" onclick="setLang('ar')">العربية</button>
+      <span class="divider">|</span>
+      <button id="btn-en" onclick="setLang('en')">English</button>
+    </div>
+    <div class="page-counter"><span id="current-page">1</span> / <span id="total-pages">9</span></div>
+  </div>
+
+  <!-- PAGES WRAPPER -->
+  <div class="pages-wrapper">
+
+    <!-- PAGE 1: HERO -->
+    <div class="page active" id="page-1">
+      <div class="hero-bg">
+        <div class="circle c1"></div><div class="circle c2"></div><div class="circle c3"></div>
+      </div>
+      <div class="page-inner hero-inner">
+        <div class="hero-content">
+          <p class="hero-label" data-ar="مشروع علمي" data-en="Science Project">مشروع علمي</p>
+          <h1 class="hero-title">SensoBin</h1>
+          <p class="hero-sub" data-ar="السلة الذكية" data-en="The Smart Waste Bin">السلة الذكية</p>
+          <p class="hero-desc" data-ar="نظام إنترنت أشياء يراقب مستوى الامتلاء تلقائياً ويُرسل تنبيهات فورية لموظفي البلدية" data-en="An IoT system that automatically monitors fill levels and sends real-time alerts to municipal staff">نظام إنترنت أشياء يراقب مستوى الامتلاء تلقائياً ويُرسل تنبيهات فورية لموظفي البلدية</p>
+        </div>
+        <div class="hero-visual">
+          <div class="bin-anim">
+            <div class="bin-lid"></div>
+            <div class="bin-body">
+              <div class="fill-bar"><div class="fill-level"></div></div>
+              <div class="bin-lines"><span></span><span></span><span></span></div>
+            </div>
+            <div class="sensor-beam"></div>
+            <div class="signal s1"></div><div class="signal s2"></div><div class="signal s3"></div>
+            <div class="led red"></div><div class="led yellow"></div><div class="led green active"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PAGE 2: PROBLEM / GOAL -->
+    <div class="page" id="page-2">
+      <div class="page-inner">
+        <div class="section-label">01</div>
+        <h2 data-ar="المشكلة والهدف" data-en="Problem & Goal">المشكلة والهدف</h2>
+        <div class="two-col">
+          <div class="card card-red">
+            <div class="card-icon">⚠️</div>
+            <h3 data-ar="المشكلة" data-en="The Problem">المشكلة</h3>
+            <p data-ar="الاعتماد على جداول زمنية ثابتة لجمع النفايات يؤدي إلى تراكمها وتلوث البيئة، أو هدر الموارد (وقت، وقود، انبعاثات) عند تفريغ حاويات نصف فارغة." data-en="Relying on fixed schedules for waste collection leads to overflow and environmental pollution, or wastes resources (time, fuel, emissions) when emptying half-empty containers.">الاعتماد على جداول زمنية ثابتة لجمع النفايات يؤدي إلى تراكمها وتلوث البيئة، أو هدر الموارد (وقت، وقود، انبعاثات) عند تفريغ حاويات نصف فارغة.</p>
+          </div>
+          <div class="card card-green">
+            <div class="card-icon">🎯</div>
+            <h3 data-ar="الهدف" data-en="The Goal">الهدف</h3>
+            <p data-ar="تصميم سلة مهملات ذكية تراقب مستوى الامتلاء آلياً وترسل تنبيهات فورية لموظفي البلدية لتحسين كفاءة الجمع." data-en="Design a smart waste bin that automatically monitors fill level and sends instant alerts to municipal staff to improve collection efficiency.">تصميم سلة مهملات ذكية تراقب مستوى الامتلاء آلياً وترسل تنبيهات فورية لموظفي البلدية لتحسين كفاءة الجمع.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PAGE 3: BACKGROUND RESEARCH -->
+    <div class="page" id="page-3">
+      <div class="page-inner">
+        <div class="section-label">02</div>
+        <h2 data-ar="الخلفية العلمية" data-en="Background Research">الخلفية العلمية</h2>
+        <div class="three-col">
+          <div class="research-card bad">
+            <div class="badge" data-ar="❌ ضعيف" data-en="❌ Weak">❌ ضعيف</div>
+            <h4 data-ar="أنظمة الوزن" data-en="Weight Systems">أنظمة الوزن</h4>
+            <p data-ar="أثبتت عدم كفاءتها لأن النفايات الخفيفة كالبلاستيك قد تملأ السلة دون زيادة ملحوظة في الوزن." data-en="Proven inefficient because light waste like plastic can fill the bin without significant weight increase.">أثبتت عدم كفاءتها لأن النفايات الخفيفة كالبلاستيك قد تملأ السلة دون زيادة ملحوظة في الوزن.</p>
+          </div>
+          <div class="research-card mid">
+            <div class="badge" data-ar="⚡ متوسط" data-en="⚡ Average">⚡ متوسط</div>
+            <h4 data-ar="أنظمة IR" data-en="IR Systems">أنظمة IR</h4>
+            <p data-ar="رخيصة ولكنها تتأثر بأشعة الشمس والغبار في البيئات المفتوحة." data-en="Cheap but affected by sunlight and dust in outdoor environments.">رخيصة ولكنها تتأثر بأشعة الشمس والغبار في البيئات المفتوحة.</p>
+          </div>
+          <div class="research-card best">
+            <div class="badge" data-ar="✅ الأفضل" data-en="✅ Best">✅ الأفضل</div>
+            <h4 data-ar="الموجات فوق الصوتية" data-en="Ultrasonic">الموجات فوق الصوتية</h4>
+            <p data-ar="تقيس الحجم (المسافة) ولا تتأثر بالعوامل الجوية. تُقلل استهلاك الوقود بنسبة 30%." data-en="Measures volume (distance) and is unaffected by weather conditions. Reduces fuel consumption by 30%.">تقيس الحجم (المسافة) ولا تتأثر بالعوامل الجوية. تُقلل استهلاك الوقود بنسبة 30%.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PAGE 4: HYPOTHESIS -->
+    <div class="page" id="page-4">
+      <div class="page-inner">
+        <div class="section-label">03</div>
+        <h2 data-ar="الفرضية" data-en="Hypothesis">الفرضية</h2>
+        <div class="hypothesis-box">
+          <p data-ar="على فرض تم تبني نظام SensoBin، سيحدث تغيير ملحوظ في سرعة جمع النفايات ومنع تكدسها، مع توفير مالي كبير للبلديات في تكاليف الوقود والعمالة مقارنة بتكاليف النظام الثابتة." data-en="If the SensoBin system is adopted, a notable improvement in waste collection speed and prevention of accumulation will occur, with significant financial savings for municipalities in fuel and labor costs compared to fixed system costs.">على فرض تم تبني نظام SensoBin، سيحدث تغيير ملحوظ في سرعة جمع النفايات ومنع تكدسها، مع توفير مالي كبير للبلديات في تكاليف الوقود والعمالة مقارنة بتكاليف النظام الثابتة.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- PAGE 5: MATERIALS -->
+    <div class="page" id="page-5">
+      <div class="page-inner">
+        <div class="section-label">04</div>
+        <h2 data-ar="المواد والمكونات" data-en="Materials & Components">المواد والمكونات</h2>
+        <div class="materials-grid">
+          <div class="mat-item"><span class="mat-icon">🧠</span><span data-ar="متحكم ESP32" data-en="ESP32 Controller">متحكم ESP32</span></div>
+          <div class="mat-item"><span class="mat-icon">📡</span><span data-ar="حساس HC-SR04" data-en="HC-SR04 Sensor">حساس HC-SR04</span></div>
+          <div class="mat-item"><span class="mat-icon">🔌</span><span data-ar="Breadboard وأسلاك Jumper" data-en="Breadboard & Jumper Wires">Breadboard وأسلاك Jumper</span></div>
+          <div class="mat-item"><span class="mat-icon">💡</span><span data-ar="مصابيح LED (أحمر، أصفر، أخضر)" data-en="LED Lights (Red, Yellow, Green)">مصابيح LED (أحمر، أصفر، أخضر)</span></div>
+          <div class="mat-item"><span class="mat-icon">🔋</span><span data-ar="Power Bank" data-en="Power Bank">Power Bank</span></div>
+          <div class="mat-item"><span class="mat-icon">💻</span><span data-ar="Arduino IDE + تطبيق ويب" data-en="Arduino IDE + Web App">Arduino IDE + تطبيق ويب</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PAGE 6: PROCEDURES -->
+    <div class="page" id="page-6">
+      <div class="page-inner">
+        <div class="section-label">05</div>
+        <h2 data-ar="الإجراءات" data-en="Procedures">الإجراءات</h2>
+        <div class="steps">
+          <div class="step"><div class="step-num">1</div><div class="step-body"><h4 data-ar="التخطيط" data-en="Planning">التخطيط</h4><p data-ar="اختيار تقنية الأمواج فوق الصوتية وتصميم المخطط الأولي." data-en="Selecting ultrasonic technology and designing the initial schematic.">اختيار تقنية الأمواج فوق الصوتية وتصميم المخطط الأولي.</p></div></div>
+          <div class="step"><div class="step-num">2</div><div class="step-body"><h4 data-ar="البرمجة" data-en="Programming">البرمجة</h4><p data-ar="تطوير كود بلغة C++ عبر Arduino IDE لمعالجة بيانات المسافة." data-en="Developing C++ code via Arduino IDE to process distance data.">تطوير كود بلغة C++ عبر Arduino IDE لمعالجة بيانات المسافة.</p></div></div>
+          <div class="step"><div class="step-num">3</div><div class="step-body"><h4 data-ar="التركيب" data-en="Assembly">التركيب</h4><p data-ar="تثبيت الحساس في غطاء السلة وتوصيله بالمتحكم ESP32." data-en="Mounting the sensor in the bin lid and connecting it to the ESP32 controller.">تثبيت الحساس في غطاء السلة وتوصيله بالمتحكم ESP32.</p></div></div>
+          <div class="step"><div class="step-num">4</div><div class="step-body"><h4 data-ar="الاختبار" data-en="Testing">الاختبار</h4><p data-ar="تجربة إرسال التنبيهات الإلكترونية عند امتلاء السلة فعلياً." data-en="Testing the sending of electronic alerts when the bin is actually full.">تجربة إرسال التنبيهات الإلكترونية عند امتلاء السلة فعلياً.</p></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PAGE 7: RESULTS -->
+    <div class="page" id="page-7">
+      <div class="page-inner">
+        <div class="section-label">06</div>
+        <h2 data-ar="النتائج" data-en="Results">النتائج</h2>
+        <div class="results-grid">
+          <div class="result-card"><div class="result-num">30%</div><p data-ar="تقليل في استهلاك الوقود" data-en="Fuel consumption reduction">تقليل في استهلاك الوقود</p></div>
+          <div class="result-card"><div class="result-num">✅</div><p data-ar="نجاح قراءة مستويات الامتلاء بدقة عالية" data-en="Accurate fill level readings achieved">نجاح قراءة مستويات الامتلاء بدقة عالية</p></div>
+          <div class="result-card"><div class="result-num">⚡</div><p data-ar="تفعيل نظام الإشعارات الفورية بنجاح" data-en="Real-time notification system successfully activated">تفعيل نظام الإشعارات الفورية بنجاح</p></div>
+          <div class="result-card"><div class="result-num">📉</div><p data-ar="انخفاض القراءات الخاطئة بعد التعديلات البرمجية" data-en="Reduced false readings after software adjustments">انخفاض القراءات الخاطئة بعد التعديلات البرمجية</p></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PAGE 8: CONCLUSION & FUTURE -->
+    <div class="page" id="page-8">
+      <div class="page-inner">
+        <div class="section-label">07</div>
+        <h2 data-ar="الاستنتاج والمستقبل" data-en="Conclusion & Future">الاستنتاج والمستقبل</h2>
+        <div class="two-col">
+          <div class="card card-blue">
+            <div class="card-icon">🏆</div>
+            <h3 data-ar="الاستنتاج" data-en="Conclusion">الاستنتاج</h3>
+            <p data-ar="حقق مشروع SensoBin أهدافه بتقديم حل ذكي فعال يعتمد على IoT، مما يضمن تحويل البيانات إلى فعل تنفيذي يمنع تكدس النفايات قبل وقوعه." data-en="SensoBin achieved its goals by delivering an effective IoT-based smart solution, ensuring data is converted into actionable steps that prevent waste accumulation before it occurs.">حقق مشروع SensoBin أهدافه بتقديم حل ذكي فعال يعتمد على IoT، مما يضمن تحويل البيانات إلى فعل تنفيذي يمنع تكدس النفايات قبل وقوعه.</p>
+          </div>
+          <div class="card card-purple">
+            <div class="card-icon">🚀</div>
+            <h3 data-ar="الدراسات المستقبلية" data-en="Future Research">الدراسات المستقبلية</h3>
+            <ul>
+              <li data-ar="إضافة مكبس آلي لزيادة السعة بنسبة 80%" data-en="Add automatic compactor to increase capacity by 80%">إضافة مكبس آلي لزيادة السعة بنسبة 80%</li>
+              <li data-ar="تزويد النظام بالطاقة الشمسية" data-en="Power the system with solar energy">تزويد النظام بالطاقة الشمسية</li>
+              <li data-ar="استخدام ذكاء اصطناعي للتنبؤ بمواعيد الامتلاء" data-en="Use AI to predict future fill times">استخدام ذكاء اصطناعي للتنبؤ بمواعيد الامتلاء</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PAGE 9: APPLICATIONS + REFERENCES -->
+    <div class="page" id="page-9">
+      <div class="page-inner">
+        <div class="section-label">08</div>
+        <h2 data-ar="التطبيقات والمصادر" data-en="Applications & References">التطبيقات والمصادر</h2>
+        <div class="apps-grid">
+          <div class="app-card"><span>🏙️</span><p data-ar="المدن الذكية" data-en="Smart Cities">المدن الذكية</p></div>
+          <div class="app-card"><span>🛍️</span><p data-ar="المجمعات التجارية" data-en="Commercial Centers">المجمعات التجارية</p></div>
+          <div class="app-card"><span>🏥</span><p data-ar="المستشفيات" data-en="Hospitals">المستشفيات</p></div>
+          <div class="app-card"><span>🎓</span><p data-ar="الجامعات" data-en="Universities">الجامعات</p></div>
+          <div class="app-card"><span>📊</span><p data-ar="دعم اتخاذ القرار" data-en="Decision Support">دعم اتخاذ القرار</p></div>
+        </div>
+        <div class="refs-title" data-ar="المصادر" data-en="References">المصادر</div>
+        <ul class="refs">
+          <li>Espressif Systems. (2023). <em>ESP32 series datasheet</em>. <a href="https://www.espressif.com" target="_blank">espressif.com</a></li>
+          <li>Arduino. (2023). <em>Arduino IDE documentation</em>. <a href="https://www.arduino.cc" target="_blank">arduino.cc</a></li>
+          <li>World Health Organization. (2021). <em>Safe management of wastes from health-care activities</em>. <a href="https://www.who.int" target="_blank">who.int</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </div><!-- end pages-wrapper -->
+
+  <!-- NAV BUTTONS -->
+  <div class="nav-bar">
+    <button class="nav-btn" id="btn-prev" onclick="changePage(-1)" disabled>
+      <span class="nav-arrow prev-arrow">&#8594;</span>
+      <span class="nav-label" data-ar="السابق" data-en="Prev">السابق</span>
+    </button>
+    <div class="dots" id="dots"></div>
+    <button class="nav-btn next-btn" id="btn-next" onclick="changePage(1)">
+      <span class="nav-label" data-ar="التالي" data-en="Next">التالي</span>
+      <span class="nav-arrow next-arrow">&#8592;</span>
+    </button>
+  </div>
+
+  <script>
+    const TOTAL = 9;
+    let current = 1;
+    let currentLang = 'ar';
+
+    // Build dots
+    const dotsEl = document.getElementById('dots');
+    for (let i = 1; i <= TOTAL; i++) {
+      const d = document.createElement('button');
+      d.className = 'dot' + (i === 1 ? ' active' : '');
+      d.setAttribute('aria-label', 'Page ' + i);
+      d.onclick = () => goTo(i);
+      dotsEl.appendChild(d);
+    }
+
+    function goTo(n) {
+      const pages = document.querySelectorAll('.page');
+      const dir = n > current ? 'forward' : 'backward';
+
+      pages[current - 1].classList.remove('active');
+      pages[current - 1].classList.add(dir === 'forward' ? 'exit-left' : 'exit-right');
+
+      current = n;
+      pages[current - 1].classList.add('entering');
+      pages[current - 1].classList.add('active');
+
+      requestAnimationFrame(() => {
+        pages[current - 1].classList.remove('entering');
+      });
+
+      setTimeout(() => {
+        pages.forEach(p => p.classList.remove('exit-left', 'exit-right', 'entering'));
+      }, 450);
+
+      document.querySelectorAll('.dot').forEach((d, i) => d.classList.toggle('active', i + 1 === current));
+      document.getElementById('current-page').textContent = current;
+      document.getElementById('btn-prev').disabled = current === 1;
+      document.getElementById('btn-next').disabled = current === TOTAL;
+    }
+
+    function changePage(dir) {
+      const next = current + dir;
+      if (next >= 1 && next <= TOTAL) goTo(next);
+    }
+
+    function setLang(lang) {
+      currentLang = lang;
+      const html = document.documentElement;
+      html.setAttribute('lang', lang);
+      html.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+      document.body.className = 'lang-' + lang;
+      document.querySelectorAll('[data-ar]').forEach(el => {
+        el.textContent = lang === 'ar' ? el.dataset.ar : el.dataset.en;
+      });
+      document.getElementById('btn-ar').classList.toggle('active', lang === 'ar');
+      document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+
+      // Flip arrows for LTR
+      document.querySelector('.prev-arrow').innerHTML = lang === 'ar' ? '&#8594;' : '&#8592;';
+      document.querySelector('.next-arrow').innerHTML = lang === 'ar' ? '&#8592;' : '&#8594;';
+    }
+
+    document.addEventListener('keydown', e => {
+      if (e.key === 'ArrowLeft') changePage(currentLang === 'ar' ? 1 : -1);
+      if (e.key === 'ArrowRight') changePage(currentLang === 'ar' ? -1 : 1);
+    });
+
+    let touchStartX = 0;
+    document.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; });
+    document.addEventListener('touchend', e => {
+      const diff = touchStartX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 50) changePage(diff > 0 ? (currentLang === 'ar' ? -1 : 1) : (currentLang === 'ar' ? 1 : -1));
+    });
+
+    document.getElementById('total-pages').textContent = TOTAL;
+  </script>
+</body>
+</html>
